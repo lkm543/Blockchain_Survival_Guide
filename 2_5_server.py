@@ -172,14 +172,12 @@ class BlockChain:
         address = str(public).replace('\\n','')
         address = address.replace("b'-----BEGIN RSA PUBLIC KEY-----", '')
         address = address.replace("-----END RSA PUBLIC KEY-----'", '')
-        address = address.replace(' ', '')
         return address
 
     def extract_from_private(self, private):
         private_key = str(private).replace('\\n','')
         private_key = private_key.replace("b'-----BEGIN RSA PRIVATE KEY-----", '')
         private_key = private_key.replace("-----END RSA PRIVATE KEY-----'", '')
-        private_key = private_key.replace(' ', '')
         return private_key
 
     def add_transaction(self, transaction, signature):

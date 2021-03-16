@@ -158,7 +158,6 @@ class BlockChain:
         address = str(public).replace('\\n','')
         address = address.replace("b'-----BEGIN RSA PUBLIC KEY-----", '')
         address = address.replace("-----END RSA PUBLIC KEY-----'", '')
-        address = address.replace(' ', '')
         print('Address:', address)
         return address
 
